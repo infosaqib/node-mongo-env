@@ -4,7 +4,9 @@ import app from "./app.js";
 (async ()=>{
     try {
        await mongoose.connect('mongodb://localhost:27017/gitsetup')
-       
+    app.get('/', (req, res)=>{
+        res.send('Mongoose Environment')
+    })
        app.listen(5000, ()=>{
         console.log('App is listening on http://localhost:5000');
        })
